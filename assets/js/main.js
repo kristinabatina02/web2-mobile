@@ -197,6 +197,7 @@ window.onload = function(){
                </h6>
                <h5 class="card-text">${ispisiCenu(el.price)}</h5>
                <p class="card-text">${ispisiZvezdice(el.stars)}</p>
+               <i class="${favoriti.includes(el.id) ? "fa-solid" : "fa-regular"} fa-heart favorite" data-id=${el.id}></i>
                <button type="button" class="btn btn-primary dugmeKorpa" data-id="${el.id}" data-bs-toggle="modal" data-bs-target="#cartModal">Dodaj u korpu</button>
              </div>
            </div>
