@@ -2,7 +2,7 @@ var meni = [];
 var sviProizvodi = [];
 var brend = [];
 var memorija = [];
-var url = document.location.pathname;
+var url = window.location.href;
 
 function ajaxCallBack(imeFajla, ispis){
  $.ajax({
@@ -117,15 +117,7 @@ window.onload = function(){
   ajaxCallBack("memory.json", prikaziMemorije);
   ajaxCallBack("brend.json", prikaziBrendove);
 
-  if(localStorage.getItem("filterBrend")) {
-    let idSelektovanihFiltra = JSON.parse(localStorage.getItem("filterBrend"))
-    let sviChbovi = document.querySelectorAll(".brend")
-    let selektovaniChbovi = Array.from(sviChbovi)
-                                .filter(chb => idSelektovanihFiltra.includes(parseInt(chb.value)))
-    console.log(idSelektovanihFiltra)
-    console.log(selektovaniChbovi)
-    selektovaniChbovi.forEach(chb => chb.checked = true)
-   }
+
   
   document.querySelectorAll(".favorite").forEach(function(el) {
     el.addEventListener("click", function() {
