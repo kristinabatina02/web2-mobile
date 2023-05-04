@@ -112,11 +112,32 @@ window.onload = function(){
 
 
   if (url == "https://kristinabatina02.github.io/web2-mobile/shop.html") {
+    let favoriti = []
+    if(localStorage.getItem("favoriti")){
+      favoriti = JSON.parse(localStorage.getItem("favoriti"))
+    }
     ajaxCallBack("products.json", prikaziProizvode);
     ajaxCallBack("memory.json", prikaziMemorije);
     ajaxCallBack("brend.json", prikaziBrendove);
     
-
+    document.querySelectorAll(".favorite").forEach(function(el) {
+      el.addEventListener("click", function() {
+        if(el.classList.contains("fa-regular")) {
+          el.classList.remove("fa-regular")
+          el.classList.add("fa-solid")
+          favoriti.push(parseInt(el.dataset.id))
+        } else {
+          el.classList.add("fa-regular")
+          el.classList.remove("fa-solid")
+          localStorage.removeItem("favoriti");
+          let indexZaBrisanje = favoriti.indexOf(parseInt(el.dataset.id))
+          favoriti.splice(indexZaBrisanje, 1)
+  
+        }
+        localStorage.setItem("favoriti", JSON.stringify(favoriti));
+      })
+    })
+  
     $("#sort").change(filterChange);
     $("#search").keyup(filterChange);
 
@@ -125,10 +146,7 @@ window.onload = function(){
     }
 
     //ls za omiljene proizvode
-    let favoriti = []
-    if(localStorage.getItem("favoriti")){
-      favoriti = JSON.parse(localStorage.getItem("favoriti"))
-    }
+    
 
     //prikaz brendova
     function prikaziBrendove(sviProizvodi) {
@@ -161,6 +179,10 @@ window.onload = function(){
 
   //ispis proizvoda
   function prikaziProizvode(sviProizvodi) {
+    let favoriti = []
+    if(localStorage.getItem("favoriti")) {
+      favoriti = JSON.parse(localStorage.getItem("favoriti"))
+    }
    sviProizvodi = filterByBrend(sviProizvodi);
    sviProizvodi = filterByRamMemory(sviProizvodi);
    sviProizvodi = sortiranje(sviProizvodi);
@@ -222,24 +244,7 @@ window.onload = function(){
   }
 
   //omiljeno
-  document.querySelectorAll(".favorite").forEach(function(el) {
-    el.addEventListener("click", function() {
-      if(el.classList.contains("fa-regular")) {
-        el.classList.remove("fa-regular")
-        el.classList.add("fa-solid")
-        favoriti.push(parseInt(el.dataset.id))
-      } else {
-        el.classList.add("fa-regular")
-        el.classList.remove("fa-solid")
-        localStorage.removeItem("favoriti");
-        let indexZaBrisanje = favoriti.indexOf(parseInt(el.dataset.id))
-        favoriti.splice(indexZaBrisanje, 1)
-
-      }
-      localStorage.setItem("favoriti", JSON.stringify(favoriti));
-    })
-  })
-
+  
   //filtriranje po brendovima
   function filterByBrend(sviProizvodi){
     let selektovanBrend = [];
@@ -529,7 +534,6 @@ function kupi(){
     }
 
   }
-
 
 
 
