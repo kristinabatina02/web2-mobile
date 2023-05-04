@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://kristinabatina02.github.io/mobileshop/index.html</loc>
+		<lastmod>2023-04-26</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+
+	<url>
+		<loc>https://kristinabatina02.github.io/mobileshop/shop.html</loc>
+		<lastmod>2023-04-26</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+
+	<url>
+		<loc>https://kristinabatina02.github.io/mobileshop/korpa.html</loc>
+		<lastmod>2023-04-26</lastmod>
+		<changefreq>month</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://kristinabatina02.github.io/mobileshop/contact.html</loc>
+		<lastmod>2023-04-26</lastmod>
+		<changefreq>month</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://kristinabatina02.github.io/mobileshop/autor.html</loc>
+		<lastmod>2023-04-26</lastmod>
+		<changefreq>month</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+</urlset>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="author" content="mailto:kristina.batinic.116.21@ict.edu.rs"/>
+ <meta name="keywords" content="contact"/>
+ <meta name="copyright" content="MobileShop Kristina Batinic"/>
+ <link rel="icon" type="image/x-icon" href="assets/img/favicon.png"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+ <link rel ="stylesheet" href="assets/css/style.css"/>
+ <title>MobileShop</title>
+</head>
+<body>
+ <!-- Navigation -->
+ <header id="header" class="d-flex align-items-center header-transparent bg-black">
+  <div class="container-fluid">
+    <div class="row">
+     <nav class="navbar navbar-expand-lg navbar-light pt-0 pb-0">
+       <div class="container-fluid">
+         <h1><a class="navbar-brand" href="index.html">MobileShop</a></h1>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+           <ul class="navbar-nav" id="meni">
+             
+           </ul>
+         </div>
+       </div>
+     </nav>
+    </div>
+  </div>
+</header>
+
+<!-- End of navigation -->
+
+<div class="container">
+  <div class="row">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.358672108355!2d20.4818398753093!3d44.8142571765701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2z0JLQuNGB0L7QutCwINCY0KbQoiDRiNC60L7Qu9Cw!5e0!3m2!1ssr!2srs!4v1681500970961!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+  </div>
+  
+</div>
+
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center" id="contact-form">
+    <div class="col-md-12">
+      <div class="section-heading text-center">
+        <h2>Pošalji nam poruku</h2>
+      </div>
+    </div>
+    <div class="container py-3">
+      <div class="row">
+          <form class="col-md-9 m-auto" method="post" role="form">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                  <input type="text" class="form-control bg-light border-0" id = "ime" placeholder="Ime" style="height: 55px;">
+                  <p class="greska sakrijGresku">Pogrešno ste uneli ime. Primer: Pera</p>
+              </div>
+              <div class="col-12 col-sm-6">
+                  <input type="email" class="form-control bg-light border-0" id = "imejl" placeholder="Email" style="height: 55px;">
+                  <p class="greska sakrijGresku">Email nije u dobrom formatu. Primer: pera.peric@gmail.com</p>
+              </div>
+              <div class="col-12">
+                  <input type="text" class="form-control bg-light border-0" id = "naslov" placeholder="Naslov(min 3 karaktera)" style="height: 55px;">
+                  <p class="greska sakrijGresku">Niste uneli bar 3 karaktera</p>
+              </div>
+              <div class="col-12">
+                  <textarea class="form-control bg-light border-0" id = "poruka"rows="5" placeholder="Poruka(min 10 karaktera)"></textarea>
+                  <p class="greska sakrijGresku">Niste uneli bar 10 karaktera</p>
+              </div>
+              <div class="col-12">
+                  <button class="btn btn-dark w-100 py-3" id = "btn" type="button">Pošalji poruku</button>
+                  <p class="uspesno sakrijUspesno">Poruka poslata</p>
+              </div>
+          </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+
+ <!--Footer start-->
+ <br/><br>
+ <div class="container-fluid bg-black text-light py-4">
+  <div class="container">
+      <div class="row g-5">
+          <div class="col-md-6 text-center text-md-start">
+              <p class="mb-md-0">&copy; Kristina Batinić 116/21</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+              <a href="Dokumentacija.pdf">Dokumentacija</a>
+          </div>
+      </div>
+  </div>
+</div>
+ <!--Footer end-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+ <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>

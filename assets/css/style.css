@@ -1,0 +1,50 @@
+*{
+ margin: 0;
+ padding: 0;
+ }
+.carousel-item{
+ height: 90vh !important;
+}
+.carousel-item img{
+ background-position: center !important;
+}
+a{
+ color: #fff !important;
+}
+.w-100{
+ width: 100% !important;
+}
+
+#sortiranje{
+ margin-top: 100px !important;
+}
+#cart{
+ margin-top: 70px !important;
+}
+
+
+.greska{
+ color: #ff0000;
+}
+.prikaziGresku{
+ display: block;
+}
+.sakrijGresku{
+ display: none;
+}
+.uspesno{
+ color: #000;
+ padding-top: 10px;
+}
+.sakrijUspesno{
+ display: none;
+}
+
+#korpa-form{
+ margin-top: 100px !important;
+}
+.favorite {
+ cursor: pointer;
+ font-size: 24px;
+}
+  
